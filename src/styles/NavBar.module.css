@@ -1,73 +1,102 @@
-.navbar{
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    padding: 10px 20px;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #000000;
-
-    >div{
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
+.navbar {
+	width: 100%;
+	display: flex;
+	padding: 10px 20px;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #000000;
 }
-.navlink{
-    letter-spacing: 0.0625em;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    color: #bdbcbc;
-    text-decoration: none;
-    font-weight: bold;
-
+.navbarLeft,
+.navbarCenter,
+.navbarRight {
+	width: 100%;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
 }
-svg{
-    height: 30px;
-    width: 30px;
-    padding: 5px;
+.navbarCenter {
+	flex: 1;
 }
-.brandIcon{
-    border: 1px solid rgb(209, 68, 35);
-    background-color: rgb(209, 68, 35);
-    border-radius: 0.35em;
-    padding: 0.9em 1.1em 0.7em;
-    border-top-width: 1px;
-    border-top-style: solid;
-    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 8px);
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
+.navbarLeft {
+	justify-content: flex-start;
+}
+.navbarRight {
+	justify-content: flex-end;
+}
+.navlink {
+	letter-spacing: 0.0625em;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	color: #bdbcbc;
+	text-decoration: none;
+	font-weight: bold;
+}
+/* svg {
+	height: 30px;
+	width: 30px;
+	margin: 5px;
+} */
+.brandIcon {
+	border: 1px solid rgb(209, 68, 35);
+	background-color: rgb(209, 68, 35);
+	border-radius: 0.35em;
+	padding: 0.9em 1.1em 0.7em;
+	border-top-width: 1px;
+	border-top-style: solid;
+	filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 8px);
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
 }
 
 .divider {
-    border-right: 2px solid #c2c2c2;
-    height: 2em;
-    margin: 0px 0.25em;
-    opacity: 0.25;
+	border-right: 2px solid #c2c2c2;
+	height: 2em;
+	margin: 0px 0.25em;
+	opacity: 0.25;
 }
 
-.signin, .signup{
-    appearance: none;
-    background-color: transparent;
-    border-style: solid;
-    cursor: pointer;
-    margin: 0px;
-    padding: 0px 1em;
-    overflow: visible;
-    outline: 0px;
-    text-align: center;
-    text-decoration: none;
-    border-color: rgba(104, 121, 146, 0.9);
-    color: rgb(104, 121, 146);
-    font-size: 1rem;
-    border-width: 2px;
-    padding: 5px 10px;
-    border-radius: 3em;
-    width: auto;
+.signin,
+.signup {
+	appearance: none;
+	background-color: transparent;
+	border-style: solid;
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px 1em;
+	overflow: visible;
+	outline: 0px;
+	text-align: center;
+	text-decoration: none;
+	border-color: rgba(104, 121, 146, 0.9);
+	color: rgb(104, 121, 146);
+	font-size: 1rem;
+	border-width: 2px;
+	padding: 5px 10px;
+	border-radius: 3em;
+	flex: 0 0 auto;
 }
 
-.signup{
-    background-color: rgb(104, 121, 146);
-    color: #fff;
+.signup {
+	background-color: rgb(104, 121, 146);
+	color: #fff;
+}
+.userIcon {
+	display: none;
+}
+
+@media (max-width: 900px) {
+	.navbarCenter,
+	.navbarRight {
+		display: none !important;
+	}
+	.navbarLeft {
+		flex: 1;
+		justify-content: space-between;
+	}
+
+	.userIcon {
+		display: block;
+	}
 }

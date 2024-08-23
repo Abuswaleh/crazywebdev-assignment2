@@ -1,20 +1,19 @@
-import { HamburgerIcon, SearchIcon } from "../icons/HamburgerIcon";
+import { HamburgerIcon, SearchIcon, UserIcon } from "../icons/icons";
 import styles from "../styles/NavBar.module.css";
-const navbarMockData = [
-	"Education",
-	"community",
-	"library",
-	"products",
-	"about",
-];
+const navbarMockData = ["Education", "community", "library", "products"];
 const NavBar = () => {
 	return (
 		<div className={styles.navbar}>
 			<div className={styles.navbarLeft}>
-				<HamburgerIcon />
+				<span>
+					<HamburgerIcon />
+				</span>
 				<button className={styles.brandIcon}>startups.com</button>
+				<span className={styles.userIcon}>
+					<UserIcon />
+				</span>
 			</div>
-			<div className={styles.navbarCentr}>
+			<div className={styles.navbarCenter}>
 				{navbarMockData.map((el, i) => (
 					<a href="/" className={styles.navlink} key={i}>
 						{el}
@@ -26,7 +25,9 @@ const NavBar = () => {
 					About
 				</a>
 				<span className={styles.divider}></span>
-				<SearchIcon />
+				<span>
+					<SearchIcon />
+				</span>
 				<span className={styles.divider}></span>
 				<a href="#" className={styles.signin}>
 					Sign In
